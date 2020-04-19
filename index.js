@@ -120,7 +120,8 @@ app.get("/todo",function(req,res){
 app.get("/show/:id",function(req,res){
     user.findById(req.params.id,function(err,founduser){
         if(err){}
-        else{res.render("show",{currentuser:founduser,id:req.user.id});}
+        else{res.render("show",{currentuser:founduser.age,id:req.user.id});}
+        console.log(founduser.age);
     });
     
 
