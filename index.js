@@ -86,7 +86,7 @@ app.post("/login",passport.authenticate("local",{
     failureRedirect:"/login"
 }),function(req,res){
    
-
+//sdfdsc
     
 
     
@@ -121,7 +121,7 @@ app.get("/show/:id",function(req,res){
     user.findById(req.params.id,function(err,founduser){
         if(err){}
         else{res.render("show",{currentuser:founduser.age,id:req.user.id});}
-        console.log(founduser.age);
+        
     });
     
 
